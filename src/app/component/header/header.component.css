@@ -1,0 +1,48 @@
+.header {
+  background-color: #191970;
+
+  color: white;
+  padding: 16px 0px;
+}
+
+.header-container {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left .logo {
+  color: white;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  margin-right: 16px;
+}
+
+.header-left .home {
+  display: block;
+  color: white;
+}
+
+.header-right {
+  display: flex;
+}
+.header-right a {
+  background-color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #1f1d1d;
+  display: flex;
+  margin-left: 8px;
+}
+
+.header-right a p {
+  margin-left: 4px;
+}

@@ -1,0 +1,28 @@
+<div>
+  <app-search-filter
+    *ngIf="!loading"
+    (handleSearch)="searchApis($event)"
+    (handleFilter)="filterApis($event)"
+    (handleSort)="sortApis($event)"
+  ></app-search-filter>
+  <div
+    *ngIf="searchString.length > 1 && openApis.length > 0"
+    class="search_results"
+  >
+    <h3>
+      Search results for
+      <strong [ngStyle]="{ color: 'rgb(76, 200, 225)' }">{{
+        searchString
+      }}</strong>
+    </h3>
+  </div>
+  <div *ngFor="let openApi of openApis">
+    <app-api-item [openApi]="openApi"></app-api-item>
+  </div>
+</div>
+<div *ngIf="loading">
+  <h1>Loading...</h1>
+</div>
+<div *ngIf="!loading && openApis.length === 0" class="error">
+  <p>Ooops! The APIS you are searching for are unavailable</p>
+</div>

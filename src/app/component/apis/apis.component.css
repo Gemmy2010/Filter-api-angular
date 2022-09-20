@@ -1,0 +1,13 @@
+.search_results {
+  margin: 8px 5px;
+  padding: 14px 0px;
+}
+
+.error {
+  background-color: rgb(207, 60, 60);
+  padding: 14px 7px;
+  margin: 5px;
+}
+.error p {
+  color: white;
+}

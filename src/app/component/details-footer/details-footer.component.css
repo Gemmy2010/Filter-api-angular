@@ -1,0 +1,28 @@
+.footer {
+  margin-top: 24px;
+  display: flex;
+}
+
+.footer .delete,
+.footer .update {
+  display: block;
+  padding: 4px 6px;
+  border: none;
+  outline: none;
+  color: white;
+  width: 120px;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete {
+  background-color: rgb(207, 60, 60);
+}
+
+.update {
+  background-color: rgb(94, 231, 149);
+  margin-left: 8px;
+  cursor: pointer;
+}

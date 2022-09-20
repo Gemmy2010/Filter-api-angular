@@ -1,0 +1,39 @@
+<div *ngIf="details?.API">
+  <header class="title">
+    <h1>{{ details?.API }} API Details</h1>
+    <a routerLink="/" class="btn .go_back">Go Back</a>
+  </header>
+  <div>
+    <div class="detail">
+      <h3>Name</h3>
+      <p>{{ details?.API }}</p>
+    </div>
+    <div class="detail">
+      <h3>Description</h3>
+      <p>{{ details?.Description }}</p>
+    </div>
+    <div class="detail">
+      <h3>Auth</h3>
+      <p>{{ details?.Auth ? details.Auth : "Not specified" }}</p>
+    </div>
+    <div class="detail">
+      <h3>Secure with Https</h3>
+      <p>{{ details?.HTTPS }}</p>
+    </div>
+    <div class="detail">
+      <h3>Is cors required</h3>
+      <p>{{ details?.Cors }}</p>
+    </div>
+    <div class="detail">
+      <h3>Api actual website</h3>
+      <a class="detail_link" href="{{ details?.Link }}">Visit website</a>
+    </div>
+  </div>
+  <app-details-footer
+    [details]="details"
+    (deleteAPI)="deleteApi(details.API)"
+  ></app-details-footer>
+</div>
+<div *ngIf="loading">
+  <h1>Loading...</h1>
+</div>

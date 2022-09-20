@@ -1,0 +1,25 @@
+.open_api {
+  background: #f4f4f4;
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+span {
+  color: #858484;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.open_api h3 {
+  color: #1f1d1d;
+}
+
+.open_api h4 {
+  color: #4e4b4b;
+  font-size: 0.9rem;
+}
+
+.open_api p {
+  color: #6e6c6c;
+}

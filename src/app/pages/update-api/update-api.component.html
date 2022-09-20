@@ -1,0 +1,76 @@
+<div class="form">
+  <div class="update_header">
+    <h2>Update API information</h2>
+    <a routerLink="/details/{{ name }}" class="btn">Go Back</a>
+  </div>
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-control">
+      <label for="name">API Name</label>
+      <input
+        type="text"
+        [(ngModel)]="name"
+        name="name"
+        id="name"
+        placeholder="Enter api name"
+      />
+    </div>
+    <div class="form-control">
+      <label for="description">Description</label>
+      <textarea
+        type="text"
+        [(ngModel)]="description"
+        name="description"
+        id="description"
+        placeholder="Enter api description"
+        >{{ description }}</textarea
+      >
+    </div>
+    <div class="form-control">
+      <label for="link">Api actual link</label>
+      <input
+        type="text"
+        [(ngModel)]="link"
+        name="link"
+        id="link"
+        placeholder="Enter api website link"
+      />
+    </div>
+    <div class="form-control">
+      <label for="category">Api category</label>
+      <input
+        type="text"
+        [(ngModel)]="category"
+        name="category"
+        id="category"
+        placeholder="Enter api category"
+      />
+    </div>
+    <div class="form-control">
+      <label for="category">Api auth</label>
+      <input
+        type="text"
+        [(ngModel)]="auth"
+        name="auth"
+        id="auth"
+        placeholder="Enter api auth"
+      />
+    </div>
+    <div class="form-control">
+      <label for="name">Cors</label>
+      <input
+        type="text"
+        [(ngModel)]="cors"
+        name="cors"
+        id="category"
+        placeholder="Is cors required"
+      />
+    </div>
+
+    <div class="form-control form-control-check">
+      <label for="reminder">Secure with https</label>
+      <input type="checkbox" [(ngModel)]="https" name="https" id="time" />
+    </div>
+    <input type="submit" value="Update" class="btn btn-block" />
+  </form>
+</div>

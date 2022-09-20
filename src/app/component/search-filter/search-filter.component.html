@@ -1,0 +1,69 @@
+<div class="search_filter_container">
+  <div class="search">
+    <input
+      type="text"
+      placeholder="Search for apis"
+      ngModel
+      (ngModelChange)="handleChangeEvent($event)"
+    />
+  </div>
+  <div class="sort_filter">
+    <div class="filter">
+      <h4>Filter apis by</h4>
+      <div class="filter-body">
+        <div class="form-input">
+          <select [(ngModel)]="cor" (ngModelChange)="filterByCors($event)">
+            <option [ngValue]="undefined" selected>Cors</option>
+            <option
+              *ngFor="let cor of cors"
+              (ngValue)="(cor)"
+              (click)="filterByCors(cor)"
+            >
+              {{ cor }}
+            </option>
+          </select>
+        </div>
+        <div class="form-input">
+          <select
+            [(ngModel)]="authValue"
+            (ngModelChange)="filterByAuth($event)"
+          >
+            <option [ngValue]="undefined" selected>Auth</option>
+            <option
+              *ngFor="let value of auth"
+              (ngValue)="(auth)"
+              (click)="filterByAuth(cor)"
+            >
+              {{ value ? value : null }}
+            </option>
+          </select>
+        </div>
+        <div class="form-input">
+          <select [(ngModel)]="http" (ngModelChange)="filterByHttp($event)">
+            <option [ngValue]="undefined" selected>Https</option>
+            <option
+              *ngFor="let http of https"
+              (ngValue)="(auth)"
+              (click)="filterByHttp(http)"
+            >
+              {{ http }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="sort">
+      <h4>Sort by</h4>
+      <select [(ngModel)]="sortValue" (ngModelChange)="sortApis($event)">
+        <option [ngValue]="undefined" selected>Sort By</option>
+        <option
+          *ngFor="let data of sortDataBy"
+          (ngValue)="(sortValue)"
+          (click)="sortApis(sortValue)"
+        >
+          {{ data }}
+        </option>
+      </select>
+    </div>
+  </div>
+</div>

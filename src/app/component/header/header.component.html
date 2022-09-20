@@ -1,0 +1,14 @@
+<header class="header">
+  <nav class="header-container">
+    <div class="header-left">
+      <a routerLink="/" class="logo">AB APIS</a>
+      <a routerLink="/" class="home">Home </a>
+    </div>
+    <div class="header-right">
+      <a routerLink="/create" *ngIf="hasRoute('/')"
+        ><fa-icon [icon]="faPlus"></fa-icon>
+        <p>Create new Api</p></a
+      >
+    </div>
+  </nav>
+</header>
